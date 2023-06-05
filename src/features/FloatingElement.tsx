@@ -15,6 +15,7 @@ const float = keyframes`
 
 const FloatImage = styled.img`
   z-index: 0;
+  position: absolute;
   pointer-events: none;
   animation: ${float} 3s ease-in-out infinite;
   animation-delay: 0.5s;
