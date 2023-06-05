@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 import PlayButton from "../features/PlayButton";
-import FloatingElement from "../features/FloatingElement";
-import tower from "../assets/images/tower.png"
 
 
 const RowContainer = styled.div`
