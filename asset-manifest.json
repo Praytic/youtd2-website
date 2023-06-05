@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/youtd2-website/static/css/main.faa40d6f.css",
+    "main.js": "/youtd2-website/static/js/main.43a6c60e.js",
+    "static/js/787.b76172ec.chunk.js": "/youtd2-website/static/js/787.b76172ec.chunk.js",
+    "static/media/background.png": "/youtd2-website/static/media/background.41dec07f0b40c3dfd7c5.png",
+    "static/media/friz-quadrata-std-medium.woff": "/youtd2-website/static/media/friz-quadrata-std-medium.e1fe75f05f18242c9dcc.woff",
+    "index.html": "/youtd2-website/index.html",
+    "main.faa40d6f.css.map": "/youtd2-website/static/css/main.faa40d6f.css.map",
+    "main.43a6c60e.js.map": "/youtd2-website/static/js/main.43a6c60e.js.map",
+    "787.b76172ec.chunk.js.map": "/youtd2-website/static/js/787.b76172ec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.faa40d6f.css",
+    "static/js/main.43a6c60e.js"
+  ]
+}
