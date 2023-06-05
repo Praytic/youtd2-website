@@ -1,12 +1,17 @@
 import React from 'react';
 import styled from "styled-components";
+import PlayButton from "../features/PlayButton";
 
 
 const RowContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
+  align-self: center;
+  width: 90%;
+  @media screen and (max-width: 1080px) {
+    justify-content: center;
+  }
 `;
 
 const Container = styled.div`
@@ -14,18 +19,24 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 30%;
-  padding: 2em;
-  margin-right: 10%;
-  margin-left: 10%;
-  @media screen and (max-width: 1000px) {
-    margin-right: 4%;
-    margin-left: 4%;
+  padding: 1em;
+  
+  @media screen and (max-height: 640px) {
+    min-height: 250px;
   }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 1080px) {
     display: none;
   }
 `;
+
+const PlayContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  margin-bottom: 250px;
+`
 
 const Title = styled.h1`
   color: white;
@@ -66,6 +77,9 @@ const HomePage: React.FC = () => {
           trolls, evil necromancers, scores of demons, and more on a quest to save the Kingdom from the evil hands of
           Vez’Nan</Description>
       </Container>
+      <PlayContainer>
+        <PlayButton/>
+      </PlayContainer>
       <Container>
         <Title>The kingdom is under attack!</Title>
         <Subtitle>Gather your forces and face the hordes of evil in the most acclaimed tower defense ever!</Subtitle>

@@ -14,6 +14,10 @@ const Button = styled.button`
   transition: 0.3s;
   font-family: 'Titillium Web', sans-serif;
 
+  @media screen and (max-width: 1080px) {
+    font-size: 12px;
+  }
+
   &:hover {
     color: #8d0808;
     text-shadow: 0 0 1vmax white;
@@ -33,6 +37,11 @@ interface SocialButtonProps {
 const SocialButton: React.FC<SocialButtonProps> = ({ url, logo, text}) => {
   const Icon = styled(logo)`
     margin-right: 10px;
+    @media screen and (max-width: 1080px) {
+      height: 21px !important;
+      width: 21px !important;
+    }
+
   `;
   return (
     <Link href={url} target="_blank" rel="noopener noreferrer">

@@ -11,16 +11,15 @@ const StyledNav = styled.nav`
   position: absolute;
   white-space: nowrap;
   backdrop-filter: blur(20px);
-  background: rgba(255, 250, 240, 0.8);
-  font-size: calc(10px + 2vmin);
+  background: rgb(255 224 163 / 32%);
+  font-size: calc(10px + 2vmax);
   border-radius: 0.5vmax;
   box-sizing: border-box;
-  min-height: 4vmax;
+  min-height: 40px;
   left: 1.125vmax;
   padding: 0 1vmax 0 0;
   right: 1.125vmax;
   top: 1.125vmax;
-
 `;
 
 const Header: React.FC = () => {
