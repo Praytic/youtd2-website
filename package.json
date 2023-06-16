@@ -1,7 +1,7 @@
 {
   "name": "youtd2-website",
   "version": "0.1.0",
-  "homepage": "https://praytic.github.io/youtd2-website",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
