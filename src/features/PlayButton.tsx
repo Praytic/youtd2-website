@@ -46,7 +46,9 @@ const PlayButton: React.FC<PlayButtonProps> = ({ gameProps}) => {
   // const isMacOS = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
   return (
     // <Button onClick={startGame} disabled={isMacOS}>PLAY</Button>
-    <Button onClick={startGame} disabled={gameStarted}>PLAY</Button>
+    <a href="%PUBLIC_URL%/game/index.html" onClick={startGame}>
+      <Button disabled={gameStarted}>PLAY</Button>
+    </a>
   );
 };
 
