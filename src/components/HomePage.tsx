@@ -68,14 +68,6 @@ const Subtitle = styled.h2`
   text-shadow: 0 1px rgba(0, 0, 0, 0.2);
 `;
 
-const Description = styled.p`
-  color: floralwhite;
-  font-size: 1em+1vmax;
-  line-height: 1.5em;
-  user-select: none;
-  font-family: 'Friz Quadrata', sans-serif;
-`;
-
 const HomePage: React.FC = () => {
   return (
     <RowContainer>
