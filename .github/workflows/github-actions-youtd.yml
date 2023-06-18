@@ -9,7 +9,7 @@ on:
 jobs:
   setup:
     runs-on: ubuntu-latest
-    name: cache repo with assets
+    name: release
     steps: 
     - uses: actions/checkout@v3
       with:
