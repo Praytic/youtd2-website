@@ -1,0 +1,28 @@
+name: build-and-publish
+
+on:
+  push:
+    # Sequence of patterns matched against refs/heads
+    branches:    
+      - main
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    name: cache repo with assets
+    steps: 
+    - uses: actions/checkout@v3
+      with:
+        submodules: 'true'
+
+    - name: install and build
+      run: |
+        npm install
+        npm run build
+
+    - name: deploy to github pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: build
+        cname: youtd2.com
