@@ -54,7 +54,7 @@ interface PlayButtonProps {
 const PlayButton: React.FC<PlayButtonProps> = ({ gameProps}) => {
   const [gameStarted, setGameStarted] = useState(false);
   const [disabled, setDisabled] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState<React.ReactNode | string>("");
 
   const startGame = () => {
     if (!disabled) {
@@ -79,7 +79,10 @@ const PlayButton: React.FC<PlayButtonProps> = ({ gameProps}) => {
       setDisabled(true);
       setErrorMessage("Current version of the game doesn't support mobile user experience.");
     } else if (isMacOS) {
-      setErrorMessage("Current version of the game has known issues for users with your platform. Please download the game <here> if you experience any issues during loading.");
+      const messageWithLink = (<span>
+        Current version of the game has known issues for users with your platform. Please download the game <a href="https://praytic.itch.io/youtd2" target="_blank" rel="noopener noreferrer">here</a> if you experience any issues during loading.
+      </span>)
+      setErrorMessage(messageWithLink);
     } else if (edgeVersion < 79 || chromeVersion < 68 || firefoxVersion < 79 || operaVersion < 55 || safariVersion < 15.2) {
       setDisabled(true);
       setErrorMessage("You have unsupported browser version. Please update your browser.");
