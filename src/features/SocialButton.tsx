@@ -2,6 +2,12 @@ import React from 'react';
 import styled from 'styled-components'
 import {IconType} from "react-icons";
 
+const Text = styled.p`
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+`
+
 const Button = styled.button`
   @import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
   display: flex;
@@ -48,7 +54,7 @@ const SocialButton: React.FC<SocialButtonProps> = ({ url, logo, text}) => {
       <Button>
         <>
           <Icon size={"2vmax"} />
-          {text}
+          <Text>{text}</Text>
         </>
       </Button>
     </Link>
