@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "You TD 2",
+  "name": "Discover the standalone sequel to the well-liked WC3 custom tower defense map, YouTD. This follow-up is thoughtfully crafted by the community, continuing the legacy of engaging tower defense gameplay.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,14 +8,9 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "logo458.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "458x458"
     }
   ],
   "start_url": ".",
