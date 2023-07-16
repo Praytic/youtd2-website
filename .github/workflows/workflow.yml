@@ -17,7 +17,7 @@ jobs:
         token: ${{ secrets.YOUTD2_PAT_TOKEN }}
 
     - name: install and build
-      run: |
+      run: | 
         npm install
         npm run build
 
