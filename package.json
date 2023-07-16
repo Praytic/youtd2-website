@@ -27,7 +27,8 @@
     "build": "react-scripts build & yarn sentry:ci",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sentry:ci": "sentry-cli sourcemaps inject --org icob2games --project youtd2 ./build && sentry-cli sourcemaps upload --org icob2games --project youtd2 ./build"
+    "sentry:ci": "sentry-cli sourcemaps inject --org icob2games --project youtd2 ./build && sentry-cli sourcemaps upload --org icob2games --project youtd2 ./build",
+    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org icob2games --project youtd2 ./build && sentry-cli sourcemaps upload --org icob2games --project youtd2 ./build"
   },
   "eslintConfig": {
     "extends": [
