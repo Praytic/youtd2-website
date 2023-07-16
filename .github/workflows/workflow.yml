@@ -32,7 +32,8 @@ jobs:
     - name: install and build
       run: |
         tree -L 1
-        yarn build
+        npm install
+        npm run build
       env:
         SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
 
