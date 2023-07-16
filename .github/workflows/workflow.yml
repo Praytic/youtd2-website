@@ -31,9 +31,10 @@ jobs:
  
     - name: install and build
       run: |
-        tree -L 1
         npm install
         npm run build
+        tree -L 1
+        npm run sentry:sourcemaps
       env:
         SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
 
