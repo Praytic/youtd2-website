@@ -21,10 +21,15 @@ jobs:
       with:
         submodules: 'true'
         token: ${{ secrets.YOUTD2_PAT_TOKEN }}
-
-    - name: install and build
+    
+    - name: set build version and commit
       run: |
-        npm version ${{ inputs.game_version }} 
+        git config user.name "GitHub Actions Bot"
+        git config user.email "<>"
+        npm version ${{ inputs.game_version }}
+ 
+    - name: install and build
+      run: | 
         npm install
         npm run build
       env:
