@@ -30,9 +30,9 @@ jobs:
         npm version ${{ inputs.game_version }}
  
     - name: install and build
-      run: | 
-        npm install
-        npm run build
+      run: |
+        tree -L 1
+        yarn build
       env:
         SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
 
