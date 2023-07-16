@@ -27,7 +27,6 @@ jobs:
         npm version ${{ inputs.game_version }} 
         npm install
         npm run build
-        sentry:sourcemaps
       env:
         SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
 
