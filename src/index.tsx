@@ -10,7 +10,7 @@ init({
   integrations: [
     new BrowserTracing()
   ],
-  release: "youtd2@0.4.4",
+  release: "youtd2@" + process.env.npm_package_version,
   // Performance Monitoring
   tracesSampleRate: 1.0, // Capture 100% of the transactions, reduce in production!
  });

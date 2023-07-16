@@ -5,6 +5,12 @@ on:
     # Sequence of patterns matched against refs/heads
     branches:    
       - main
+  workflow_dispatch:
+    inputs:
+      game_version:
+        description: 'Game version built by youtd2 workflow'
+        required: true
+        type: string
 
 jobs:
   setup:
@@ -17,13 +23,13 @@ jobs:
         token: ${{ secrets.YOUTD2_PAT_TOKEN }}
 
     - name: install and build
-      run: | 
+      run: |
+        npm version ${{ inputs.game_version }} 
         npm install
         npm run build
         sentry:sourcemaps
       env:
         SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-
 
     - name: deploy to github pages
       uses: peaceiris/actions-gh-pages@v3
