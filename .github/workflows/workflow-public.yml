@@ -1,4 +1,4 @@
-name: build-and-publish
+name: update game binary
 
 on:
     workflow_dispatch:
@@ -24,4 +24,5 @@ jobs:
                   git config user.email "<>"
                   npm version ${{ inputs.game_version }}
                   git commit -am "Update version of the game binary to ${{ inputs.game_version }}"
+                  git log
                   git push origin main
