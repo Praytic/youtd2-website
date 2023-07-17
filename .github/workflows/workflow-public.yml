@@ -22,7 +22,7 @@ jobs:
               run: |
                   git config user.name "GitHub Actions Bot"
                   git config user.email "<>"
-                  npm version ${{ inputs.game_version }}
+                  npm version ${{ inputs.game_version }} --no-git-tag-version
                   git commit -am "Update version of the game binary to ${{ inputs.game_version }}"
                   git log
                   git push origin main
