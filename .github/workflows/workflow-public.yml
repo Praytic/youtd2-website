@@ -1,0 +1,27 @@
+name: build-and-publish
+
+on:
+    workflow_dispatch:
+        inputs:
+            game_version:
+                description: 'Game version built by youtd2 workflow'
+                required: true
+                type: string
+
+jobs:
+    setup:
+        runs-on: ubuntu-latest
+        name: update game version
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  submodules: 'true'
+                  token: ${{ secrets.YOUTD2_PAT_TOKEN }}
+
+            - name: set build version and commit
+              run: |
+                  git config user.name "GitHub Actions Bot"
+                  git config user.email "<>"
+                  npm version ${{ inputs.game_version }}
+                  git commit -am "Update version of the game binary to ${{ inputs.game_version }}"
+                  git push origin main
