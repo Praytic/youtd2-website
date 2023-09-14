@@ -91,11 +91,17 @@ const PlayButton: React.FC<PlayButtonProps> = ({ gameProps}) => {
 
   return (
     <div>
-      <a href={process.env.PUBLIC_URL + "/game/index.html"} onClick={startGame}>
-        <Button disabled={gameStarted || disabled}>PLAY</Button>
+      <a href="https://praytic.itch.io/youtd2">
+        <Button>PLAY</Button>
       </a>
-      <Warning>{errorMessage}</Warning>
     </div>
+    // Keep commented until github pipeline is fixed
+  // <div>
+  //   <a href={process.env.PUBLIC_URL + "/game/index.html"} onClick={startGame}>
+  //     <Button disabled={gameStarted || disabled}>PLAY</Button>
+  //   </a>
+  //   <Warning>{errorMessage}</Warning>
+  // </div>
   );
 };
 
