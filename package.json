@@ -1,6 +1,6 @@
 {
   "name": "youtd2-website",
-  "version": "0.7.4",
+  "version": "0.7.6",
   "homepage": "./",
   "private": true,
   "dependencies": {
